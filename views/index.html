@@ -1,30 +1,161 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Single page web app using Angularjs</title>
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.3/angular-route.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-<script src="script.js"></script>
+    <meta charset="UTF-8">
+    <title>Rision month view prototype 0.01</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/public/css/main.css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="/public/js/rision.js"></script>
 </head>
+
 <body>
-<div>
-<div>
-<nav class="navbar navbar-inverse" role="navigation" style="padding-left:130px;">
-       <ul class="nav navbar-nav">
-      <li class="active"><a href="/">Home<span class="sr-only">(current)</span></a></li>
-      <li><a href="/about">About us</a></li>
-      <li><a href="/contact">Contact us</a></li>
-    </ul>
-</nav>
-</div>
-<br/>
-<div class="jumbotron"> <p>
-This is place to put content. You can put slider, short description about your website and place some links for navigation.
-</p></div>
-</div>
+    <div>
+        <div class="rision-wrapper">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#"></a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Roster</a></li>
+                            <li><a href="#">Timesheet</a></li>
+                            <li><a href="#">Last minute</a></li>
+                            <li><a href="#"> Staff manager</a></li>
+                            <li><a href="#"> reports</a></li>
+                            <li><a href="#"> Karren D (Sign out)</a></li>
+
+
+
+
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container-fluid -->
+            </nav>
+            <nav class="navbar rision-ribbon">
+                <a class="navbar-brand" href="#"></a>
+                <div>
+
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation"><a href="#month" aria-controls="month" role="tab" data-toggle="tab">Sheppy: community</a></li>
+                        <li role="presentation" class="active"><a href="#shift" aria-controls="shift" role="tab" data-toggle="tab">Shifts</a></li>
+                        <li role="presentation"><a href="#publish" aria-controls="publish" role="tab" data-toggle="tab">Publish</a></li>
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane" id="month">month view</div>
+                        <div role="tabpanel" class="tab-pane active" id="shift">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul class="shifts">
+                                        <li class="green">
+                                            <div class="shortcode">E</div>
+                                            <div class="name">Early</div>
+                                            <div class="time">4:00pm to 8:00pm</div>
+                                        </li>
+                                        <li class="green border">
+                                            <div class="shortcode">ET</div>
+                                            <div class="name">Early triage</div>
+                                            <div class="time">4:00pm to 8:00pm</div>
+                                        </li>
+                                        <li class="green border">
+                                            <div class="shortcode">EL</div>
+                                            <div class="name">Early team lead</div>
+                                            <div class="time">4:00pm to 8:00pm</div>
+                                        </li>
+                                        <li>
+                                            <div class="shortcode">L</div>
+                                            <div class="name">Late</div>
+                                            <div class="time">4:00pm to 8:00pm</div>
+                                        </li>
+                                        <li class="blue border">
+                                            <div class="shortcode">LT</div>
+                                            <div class="name">Late triage</div>
+                                            <div class="time">4:00pm to 8:00pm</div>
+                                        </li>
+                                        <li class="blue border">
+                                            <div class="shortcode">LL</div>
+                                            <div class="name">Late team lead</div>
+                                            <div class="time">4:00pm to 8:00pm</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-3">
+                                    <ul class="shifts">
+                                        <li>
+                                            <div class="shortcode">DO</div>
+                                            <div class="name">Day off</div>
+                                        </li>
+                                        <li>
+                                            <div class="shortcode">SD</div>
+                                            <div class="name">Study day</div>
+                                        </li>
+                                        <li>
+                                            <div class="shortcode">SP</div>
+                                            <div class="name">Supernumerary</div>
+                                        </li>
+                                        <li class="border-red">
+                                            <div class="shortcode">RO</div>
+                                            <div class="name">Requested day off</div>
+                                        </li>
+                                        <li>
+                                            <div class="shortcode">SK</div>
+                                            <div class="name">Sick day</div>
+                                        </li>
+                                        <li>
+                                            <div class="shortcode">AL</div>
+                                            <div class="name">Annual leave</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="pull-right">
+                                        <ul class="shifts">
+                                            <li>
+                                                <div class="shortcode">--</div>
+                                                <div class="name">Cancel shift</div>
+                                            </li>
+                                            <li>
+                                                <div class="shortcode">--</div>
+                                                <div class="name">Create new shift</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="publish">publish view</div>
+                    </div>
+
+                </div>
+            </nav>
+        </div>
+        <br/>
+        <div class="jumbotron">
+            <p>
+
+            </p>
+        </div>
+    </div>
 </body>
+
 </html>
