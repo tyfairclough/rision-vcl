@@ -34,7 +34,24 @@ $("#left-side-split").click(function(e){
         $("div",this).addClass("shift-"+shiftType);
         }
     })
+    
+    
+$("table").click(function(e){
+    e.preventDefault();
+      activeTab('shift');
+
+});
+    
+    function activeTab(tab) {
+              $('.nav-tabs a[href="#' + tab + '"]').tab('show');
+    }
   
+    
+$("#datepicker").datepicker( {
+    format: "mm-yyyy",
+    viewMode: "months", 
+    minViewMode: "months"
+});    
 
 $.typeahead({
     input: '.js-typeahead-country_v1',

@@ -492,7 +492,7 @@ body {
         body nav.rision-ribbon .nav-tabs + .tab-content .tab-pane {
           background: white;
           overflow: auto; }
-        body nav.rision-ribbon .nav-tabs + .tab-content #publish, body nav.rision-ribbon .nav-tabs + .tab-content #month, body nav.rision-ribbon .nav-tabs + .tab-content #location {
+        body nav.rision-ribbon .nav-tabs + .tab-content #publish, body nav.rision-ribbon .nav-tabs + .tab-content #month, body nav.rision-ribbon .nav-tabs + .tab-content #location, body nav.rision-ribbon .nav-tabs + .tab-content #shiftView {
           padding: 20px; }
         body nav.rision-ribbon .nav-tabs + .tab-content #location .typeahead__container .typeahead__list {
           position: relative; }

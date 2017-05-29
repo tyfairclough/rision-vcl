@@ -33,6 +33,13 @@ router.get("/public/js/jquery.jscrollpane.min.js",function(req,res){
   res.sendFile(path + "/public/js/jquery.jscrollpane.min.js");
 });
 
+router.get("/public/js/bootstrap-datepicker.js",function(req,res){
+  res.sendFile(path + "/public/js/bootstrap-datepicker.js");
+});
+router.get("/public/css/datepicker.css",function(req,res){
+  res.sendFile(path + "/public/css/datepicker.css");
+});
+
 
 router.get("/public/js/rision.js",function(req,res){
   res.sendFile(path + "/public/js/rision.js");
