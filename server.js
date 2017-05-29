@@ -23,10 +23,21 @@ router.get("/contact",function(req,res){
 router.get("/public/css/main.css",function(req,res){
   res.sendFile(path + "/public/css/main.css");
 });
+router.get("/public/css/jquery.jscrollpane.css",function(req,res){
+  res.sendFile(path + "/public/css/jquery.jscrollpane.css");
+});
+router.get("/public/js/jquery.typeahead.js",function(req,res){
+  res.sendFile(path + "/public/js/jquery.typeahead.js");
+});
+router.get("/public/js/jquery.jscrollpane.min.js",function(req,res){
+  res.sendFile(path + "/public/js/jquery.jscrollpane.min.js");
+});
+
 
 router.get("/public/js/rision.js",function(req,res){
   res.sendFile(path + "/public/js/rision.js");
 });
+
 
 app.use("/",router);
 
