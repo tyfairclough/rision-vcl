@@ -28,6 +28,20 @@ $rision-black: #000333;
 
 
 
+
+// expose 
+
+.expose {
+    position:relative;
+}
+
+#overlay {
+    background:rgba(0,0,0,0.3);
+    display:none;
+    width:100%; height:100%;
+    position:absolute; top:0; left:0; z-index:1002;
+}
+
 // type ahead
 
 // FORM RESETS ----------------- https://github.com/necolas/normalize.css/ ---------------------------------------------
@@ -744,8 +758,9 @@ body {
                                 width: 160px;
                                 padding: 10px;
                                 background: $rision-white;
-                                //border: 2px solid shade($rision-gray-dk, 20%);
-                                color: $rision-white;
+                                border-bottom: 1px solid tint($rision-gray,90%);
+                                border-right: 1px solid tint($rision-gray,90%);
+                                color: $rision-black;
                                 min-height: 65px;
                                 .shortcode {
                                     float: left;
@@ -753,6 +768,14 @@ body {
                                     font-weight: 900;
                                     padding-right: 10px;
                                     line-height: 36px;
+                                    margin-right: 5px;
+                                    border: 4px solid $rision-black;
+                                    border-radius: 40px;
+                                    width: 40px;
+                                    height: 40px;
+                                    text-align: center;
+                                    padding: 0;
+                                    line-height: 32px;
                                 }
                                 .name {
                                     white-space: nowrap;
@@ -775,43 +798,53 @@ body {
                                     text-overflow: fade(10px);
                                     text-overflow: fade(5%);                                    
                                 }
-                                &.green {
+                                &.green .shortcode {
                                     background: $rision-green;
                                     border: 4px solid $rision-green;
                                 }
-                                &.blue {
+                                &.blue .shortcode {
                                     background: $rision-blue;
                                     border: 4px solid $rision-blue;
                                 }
-                                &.white {
+                                &.blue .name {
+                                    color: $rision-white;
+                                }
+                                &.white .shortcode {
                                     background: $rision-white;
                                     color: $rision-black;
                                 }
-                                &.gray {
+                                &.gray .shortcode {
                                     background: tint($rision-gray,50%);
                                     color: $rision-black;
                                 }
-                                &.red {
+                                &.black .shortcode {
+                                    background: $rision-black;
+                                    color: $rision-white;
+                                }
+                                &.red .shortcode {
                                     background: tint($rision-red,50%);
                                     color: $rision-black;
                                 }
-                                &.border-green {
+                                &.border-green .shortcode {
                                     border: 4px solid shade($rision-green, 20%);                                    
                                 }
-                                &.border-blue {
+                                &.border-blue .shortcode {
                                     border: 4px solid shade($rision-blue, 20%);
                                 }
-                                &.border-red {
+                                &.border-red .shortcode {
                                 border: 4px solid shade($rision-red, 20%);
                                 }
-                                &.border-gray {
+                                &.border-gray .shortcode {
                                     border: 4px solid tint($rision-gray,20%);
                                 }
-                                &.border-white {
+                                &.border-white .shortcode {
                                     border: 4px solid tint($rision-gray,80%);
                                 }
+                                &.selected .shortcode {
+                                    //background: $rision-orange;
+                                }
                                 &.selected {
-                                    border: 4px solid $rision-orange !important;
+                                    box-shadow: inset 0px 0px 0px 4px $rision-orange;                                    
                                 }
                             }       
                         }
@@ -902,6 +935,9 @@ body {
                     span {
                         display: none;
                     }
+                    &.selected {
+                        background: tint($rision-orange,50%);
+                    }                    
                 }
             }
         }
@@ -1029,14 +1065,16 @@ body {
                     background: $rision-white;
                     color: $rision-black
                 }
-                .shift-do, .shift-ro, .shift-sk {
+                .shift-do, .shift-ro {
                         box-shadow: 0 0 0 2pt shade($rision-red,20%),0 0 20px rgba(0,0,0,0.2);
                 }
                 .shift-al, .shift-sd, .shift-al, .shift-sp {
                     box-shadow: none;
                 }
-                .shift-sk {
-                    background: tint($rision-red,50%);
+                .shift-sk, .shift-al {
+                    background: $rision-black;
+                        color: $rision-white;
+                    border: 2px solid $rision-black;
                 }
                 
             }
